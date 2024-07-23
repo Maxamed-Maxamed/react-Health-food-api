@@ -19,3 +19,13 @@ export const getRecipes = async (query,) => {
   return data.results;
 };
 
+
+export const getRecipeDetails = async (id) => {
+  const response = await fetch(`${BASE_URL}/recipes/${id}/information?apiKey=${API_KEY}`);
+  const data = await response.json();
+  return data;
+};
+
+
+// pagination
+
